@@ -1,12 +1,44 @@
-# React + Vite
+# Shivam Thakre - Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Portfolio Screenshot](./screenshot.png) <!-- Add your screenshot here -->
 
-Currently, two official plugins are available:
+A modern, responsive portfolio website showcasing my skills, projects, and contact information. Built with React, Tailwind CSS, and Framer Motion for animations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+✨ **Modern UI Design**  
+✔️ Clean, minimalist interface with smooth animations  
+✔️ Responsive layout for all device sizes  
+✔️ Dark theme with vibrant accent colors
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🚀 **Interactive Elements**  
+✔️ Typewriter effect on hero section  
+✔️ Smooth scrolling navigation  
+✔️ Reveal-on-scroll animations  
+✔️ Interactive contact form
+
+📱 **Sections**  
+✔️ Home/About  
+✔️ Projects showcase  
+✔️ Contact with social media links  
+✔️ Responsive navbar
+
+## Technologies Used
+
+- **Frontend**:
+
+  - React.js
+  - Tailwind CSS
+  - Framer Motion (for animations)
+  - React Icons
+
+- **Form Handling**:
+  - EmailJS for contact form submissions
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/portfolio.git
+   cd portfolio
+   ```
