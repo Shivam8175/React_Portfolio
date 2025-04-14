@@ -8,6 +8,7 @@ import {
   FaFacebook,
   FaEnvelope,
   FaDiscord,
+  FaPhoneAlt,
 } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 
@@ -15,6 +16,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    number: "",
     message: "",
   });
 
@@ -75,6 +77,11 @@ const Contact = () => {
       label: "Discord",
       url: "https://discord.com/users/yourid",
       color: "hover:text-indigo-500",
+    },
+    {
+      icon: <FaPhoneAlt className="text-2xl" />,
+      label: 8103714517,
+      color: "hover:text-indigo-400",
     },
   ];
 
@@ -144,6 +151,20 @@ const Contact = () => {
                   placeholder="Your Email"
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
+                  }
+                />
+              </div>
+              <div className="relative">
+                <input
+                  type="text"
+                  id="number"
+                  name="number"
+                  required
+                  value={formData.number}
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                  placeholder="Your Number"
+                  onChange={(e) =>
+                    setFormData({ ...formData, number: e.target.value })
                   }
                 />
               </div>

@@ -7,11 +7,11 @@ const Home = () => {
   const [isTyping, setIsTyping] = useState(true);
   const [showCursor, setShowCursor] = useState(true);
   const roles = useRef([
-    "Hiii, I'm Shivam Thakre",
-    "Full-Stack Developer",
-    "Frontend Specialist",
-    "UI/UX Designer",
-    "Web Enthusiast",
+    "Shivam Thakre",
+    "a Full-Stack Developer",
+    "a Frontend Specialist",
+    "a UI/UX Designer",
+    "a Web Enthusiast",
   ]);
 
   useEffect(() => {
@@ -24,11 +24,14 @@ const Home = () => {
   useEffect(() => {
     let timeout;
     const currentText = roles.current[currentRoleIndex % roles.current.length];
+    const prefix = "Hiii, I'm ";
 
     if (isTyping) {
-      if (displayText.length < currentText.length) {
+      if (displayText.length < (prefix + currentText).length) {
         timeout = setTimeout(() => {
-          setDisplayText(currentText.substring(0, displayText.length + 1));
+          setDisplayText(
+            (prefix + currentText).substring(0, displayText.length + 1)
+          );
         }, 100 + Math.random() * 50);
       } else {
         timeout = setTimeout(() => {
@@ -36,7 +39,7 @@ const Home = () => {
         }, 2000);
       }
     } else {
-      if (displayText.length > 0) {
+      if (displayText.length > prefix.length) {
         timeout = setTimeout(() => {
           setDisplayText(displayText.substring(0, displayText.length - 1));
         }, 50);
