@@ -1,7 +1,56 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import RevealOnScroll from "../RevealOnScroll";
 
 const Home = () => {
+  const [displayText, setDisplayText] = useState("");
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+  const [showCursor, setShowCursor] = useState(true);
+  const roles = useRef([
+    "Hiii, I'm Shivam Thakre",
+    "Full-Stack Developer",
+    "Frontend Specialist",
+    "UI/UX Designer",
+    "Web Enthusiast",
+  ]);
+
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor((prev) => !prev);
+    }, 500);
+    return () => clearInterval(cursorInterval);
+  }, []);
+
+  useEffect(() => {
+    let timeout;
+    const currentText = roles.current[currentRoleIndex % roles.current.length];
+
+    if (isTyping) {
+      if (displayText.length < currentText.length) {
+        timeout = setTimeout(() => {
+          setDisplayText(currentText.substring(0, displayText.length + 1));
+        }, 100 + Math.random() * 50);
+      } else {
+        timeout = setTimeout(() => {
+          setIsTyping(false);
+        }, 2000);
+      }
+    } else {
+      if (displayText.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayText(displayText.substring(0, displayText.length - 1));
+        }, 50);
+      } else {
+        timeout = setTimeout(() => {
+          setCurrentRoleIndex(currentRoleIndex + 1);
+          setIsTyping(true);
+        }, 500);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayText, currentRoleIndex, isTyping]);
+
   return (
     <section
       id="home"
@@ -9,27 +58,37 @@ const Home = () => {
     >
       <RevealOnScroll>
         <div className="text-center z-10 px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-right">
-            Hiii, I'm Shivam Thakre
-          </h1>
-          <p className="tex-gray-400 text-lg mb-8 max-w-lg mx-auto">
-            I’m a full-stack developer who loves crafting clean, scalable web
-            applications. My goal is to build solutions that offer both
-            exceptional performance and a delightful user experience.
+          <div className="h-28 md:h-36 flex items-center justify-center mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+              {displayText}
+              <span
+                className={`ml-1 ${showCursor ? "opacity-100" : "opacity-0"}`}
+              >
+                |
+              </span>
+            </h1>
+          </div>
+
+          <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
+            I craft digital experiences that are fast, intuitive, and beautiful.
+            Currently focused on building responsive web applications with
+            modern technologies.
           </p>
+
           <div className="flex justify-center space-x-4">
             <a
-              href="#projects"
-              className="bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]"
+              href="https://drive.google.com/file/d/1uzMenbFWlsfVnnC7cHgcbkltzYDe7-z3/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/30"
             >
-              View Projects
+              View Resume
             </a>
             <a
               href="#contact"
-              className="border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all duration-200 
-             hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10"
+              className="border-2 border-blue-500/30 hover:border-blue-500/70 text-blue-400 hover:text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/10 hover:bg-blue-500/20"
             >
-              Contact Me
+              Get In Touch
             </a>
           </div>
         </div>
