@@ -7,7 +7,6 @@ const Home = () => {
   const [isTyping, setIsTyping] = useState(true);
   const [showCursor, setShowCursor] = useState(true);
   const roles = useRef([
-    "Shivam Thakre",
     "a Full-Stack Developer",
     "a Frontend Specialist",
     "a UI/UX Designer",
@@ -24,7 +23,7 @@ const Home = () => {
   useEffect(() => {
     let timeout;
     const currentText = roles.current[currentRoleIndex % roles.current.length];
-    const prefix = "Hiii, I'm ";
+    const prefix = "I'm ";
 
     if (isTyping) {
       if (displayText.length < (prefix + currentText).length) {
@@ -62,14 +61,19 @@ const Home = () => {
       <RevealOnScroll>
         <div className="text-center z-10 px-4">
           <div className="h-28 md:h-36 flex items-center justify-center mb-6">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-              {displayText}
-              <span
-                className={`ml-1 ${showCursor ? "opacity-100" : "opacity-0"}`}
-              >
-                |
-              </span>
-            </h1>
+            <div>
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Hi,I'm Shivam Thakre
+              </h1>
+              <h5 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+                {displayText}
+                <span
+                  className={`ml-1 ${showCursor ? "opacity-100" : "opacity-0"}`}
+                >
+                  |
+                </span>
+              </h5>
+            </div>
           </div>
 
           <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
