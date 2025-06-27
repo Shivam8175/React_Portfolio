@@ -1,6 +1,7 @@
 # Shivam Thakre - Portfolio Website
 
-![Portfolio Screenshot](./screenshots/portfolioscreenshot.png)
+![Portfolio Screenshot](./react_portfolio/src/assets/portfolioscreenshots.png)
+![Portfolio Screenshot](./react_portfolio/src/assets/portfolioscreenshots1.png)
 
 A modern, responsive portfolio website showcasing my skills, projects, and contact information. Built with React, Tailwind CSS, and Framer Motion for animations.
 
