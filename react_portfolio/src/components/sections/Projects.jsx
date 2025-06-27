@@ -20,7 +20,7 @@ const Projects = () => {
       description:
         "A dynamic and visually appealing web application designed to showcase an individual's skills, projects, and professional achievements. Built with React and Tailwind CSS.",
       technologies: ["React", "Tailwind CSS"],
-      link: "https://shivamthakreportfolio.netlify.app/",
+      link: "https://react-portfolio-ivory-phi.vercel.app/",
       code: "https://github.com/Shivam8175/React_Portfolio",
       image: portfolioImg,
     },
