@@ -65,7 +65,7 @@ const Home = () => {
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Hi,I'm Shivam Thakre
               </h1>
-              <h5 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+              <h5 className="text-2xl mb-5 md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                 {displayText}
                 <span
                   className={`ml-1 ${showCursor ? "opacity-100" : "opacity-0"}`}

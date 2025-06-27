@@ -12,7 +12,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
             SK<span className="text-blue-500">.tech</span>
           </a>
           <div
-            className="w-7 h-5 relative cursor-pointer z-40 md:hidden"
+            className="w-7 h-5 relative cursor-pointer z-40 md:hidden mr-6"
             onClick={() => setMenuOpen((prev) => !prev)}
           >
             &#9776;
