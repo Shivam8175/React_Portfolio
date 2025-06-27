@@ -84,7 +84,7 @@ const Home = () => {
 
           <div className="flex justify-center space-x-4">
             <a
-              href="https://drive.google.com/file/d/1uzMenbFWlsfVnnC7cHgcbkltzYDe7-z3/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1EPfHSY7IJW43yHCKYB5JLZ-MZzOouHgy/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/30"

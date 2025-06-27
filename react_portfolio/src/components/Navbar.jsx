@@ -43,7 +43,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
               Contact
             </a>
             <a
-              href="https://drive.google.com/file/d/1uzMenbFWlsfVnnC7cHgcbkltzYDe7-z3/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1EPfHSY7IJW43yHCKYB5JLZ-MZzOouHgy/view?usp=sharing"
               target="blank"
               className="text-gray-300 hover:text-white transition-colors"
             >

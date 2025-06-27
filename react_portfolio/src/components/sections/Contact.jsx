@@ -38,7 +38,7 @@ const Contact = () => {
   const socialLinks = [
     {
       icon: <FaEnvelope className="text-2xl" />,
-      label: "Email",
+      label: "st548501@gmail.com",
       url: "https://mail.google.com/mail/u/0/#inbox",
       color: "hover:text-red-400",
     },
